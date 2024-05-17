@@ -1,0 +1,23 @@
+@import "@/styles/variables.scss";
+
+.rhs_Wrapper {
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  .notificatin_container {
+    color: $color_white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile_container {
+    color: $color_white;
+    cursor: pointer;
+  }
+}

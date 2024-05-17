@@ -1,0 +1,24 @@
+import React from "react";
+import SmallCardVariant from "./smallCardVariant";
+import MediumCardVariant from "./mediumCardVariant";
+import styles from "./cards.module.scss";
+
+export interface IBaseCardProps {
+  color?: "success" | "primary" | "warning" | "red";
+  variant?: "base" | "sm" | "md" | "lg" | "double";
+  text: string;
+  count: number;
+  path: string;
+}
+
+const Cards = (props: IBaseCardProps) => {
+  const { variant = "md", ...rest } = props;
+  return (
+    <div className={styles.card_wrapper}>
+      {variant === "sm" ? <SmallCardVariant {...rest} /> : null}
+      {variant === "md" ? <MediumCardVariant {...rest} /> : null}
+    </div>
+  );
+};
+
+export default Cards;

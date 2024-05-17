@@ -1,0 +1,18 @@
+@import "@/styles/variables.scss";
+
+.headerLabel_wrapper {
+  position: sticky;
+  top: 48px;
+  left: 0;
+  z-index: 9;
+  margin-left: 3.8rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  height: 4rem;
+  background-color: $color_white;
+  display: flex;
+  align-items: center;
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}

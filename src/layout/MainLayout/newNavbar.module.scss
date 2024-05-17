@@ -1,0 +1,42 @@
+@import "@/styles/variables.scss";
+
+.newNavWrapper {
+  min-height: 100vh;
+  z-index: 3;
+  background-color: $color_2;
+  width: 100%;
+  .navContainer {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary_1;
+    @media (max-width: 768px) {
+    }
+  }
+  .mainBodyWrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    @media (max-width: 768px) {
+      gap: 0;
+    }
+    .navListWrapper {
+      width: 3rem;
+      @media (max-width: 768px) {
+        width: unset;
+      }
+    }
+    .mainWrapper {
+      min-height: calc(100vh - 45px);
+      width: 100%;
+      padding: 0 1rem;
+      background-color: $color_white;
+    }
+  }
+}
